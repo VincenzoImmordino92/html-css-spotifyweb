@@ -1,0 +1,112 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+font-family: 'Montserrat';
+}
+
+.ptn-rtv{
+  position: relative;
+}
+
+.ptn-absl{
+  position: absolute;
+}
+
+.flex{
+  display: flex;
+}
+
+.bug{
+  background-color: lightgray;
+  min-height: 50px;
+  width: 50px;
+}
+.bug2{
+  background-color: lightgreen;
+  min-height: 50px;
+  width: 50px;
+}
+.bug3{
+  background-color: rgb(182, 37, 37);
+  min-height: 50px;
+  width: 50px;
+}
+
+.bug4{
+  background-color: rgb(253, 249, 14);
+  min-height: 50px;
+  width: 50px;
+}
+
+.bug5{
+  background-color: rgb(250, 137, 9);
+  min-height: 50px;
+  width: 50px;
+  border: 1px solid black;
+}
+
+
+.content{
+  width: 100vw;
+height: calc(100vh - 50px);
+}
+
+.sidebar{
+  width: 220px;
+  height: calc(100vh - 50px);
+}
+
+.bar-fixed{
+  width: calc(100vw - 220px);
+  height: 50px;
+  position: fixed;
+  z-index: 999;
+  top: 0px;
+  right: 0px;
+}
+
+.player{
+  width: 100vw;
+  height: 90px;
+}
+
+.player .row-player{
+  height: 100%;
+justify-content: space-between;
+}
+
+.player .row-player{
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:600px) {
+ .sidebar{
+  width: 50px;
+ }
+
+ .bar-fixed{
+  width: calc(100vw - 50px);
+  height: 50px;
+  
+}
+}
