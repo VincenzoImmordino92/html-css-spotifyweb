@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+:root{
+  --padding-15px:15px 15px 0 15px;
+}
+
 body{
 font-family: 'Montserrat';
 }
@@ -16,6 +20,10 @@ font-family: 'Montserrat';
 
 .ptn-absl{
   position: absolute;
+}
+
+.br-rd{
+  border-radius: 50%;
 }
 
 .flex{
@@ -48,8 +56,11 @@ ul{
 .btm{
   color: white;
   border: 1px solid white;
-  padding: 15px 40px;
+  padding: 15px 30px;
+  margin-right: 10px;
   border-radius: 25px;
+ 
+
 }
 
 .content{
@@ -72,7 +83,7 @@ aside{
  color: gray;
  flex-direction: column;
  justify-content: space-between;
- padding: 15px 15px 0 15px;
+ padding-top: 10px;
 }
 
 aside .row-high{
@@ -83,6 +94,8 @@ aside .row-high{
 
 aside .row-high .image-spotfy-desktop img{
   width: 140px;
+  padding: var(--padding-15px);
+
 }
 
 aside .row-high .image-spotfy-mobile{
@@ -93,22 +106,44 @@ aside .row-high .playlist-top{
   padding-top: 10px;
 }
 
-aside .row-high .playlist-top,.playlist-down ul li,span{
-  padding: 5px 0 10px 3px;
+aside .row-high .playlist-top ul li,a{
+  vertical-align: middle;
   text-transform:capitalize ;
   font-size: 0.9rem;
+  text-decoration: none;
+  color: gray;
+  padding: 4px 0px;
+}
+
+aside .row-high .playlist-top ul li{
+  padding: 0px 15px ;
+  margin: 10px 0px 0px 0px;
 }
 
 aside .row-high .playlist-down{
   height: 100%;
-  overflow: auto;
+}
+
+aside .row-high .playlist-down .plus {
+  padding: 0px 15px ;
+  margin: 10px 0px 0px 0px;
 }
 
 aside .row-high h3{
   color: white;
   text-transform: capitalize;
   font-size: 1.1rem;
-  padding: 5px 0 10px 3px;
+  padding: 15px 0 15px 18px;
+}
+
+aside .row-high .playlist-down ul{
+  overflow: auto;
+  height: calc(100% - 90px);
+}
+
+aside .row-high .playlist-down ul li{
+  padding: 0px 15px ;
+  margin: 10px 0px 0px 0px;
 }
 
 aside .img-svg{
@@ -117,15 +152,22 @@ height:26px;
 }
 
 aside .row-low{
-  height: 80px;
+  height: 90px;
+  padding: 0px 15px;
 }
 
 aside .row-low .col{
-  padding: 10px 0px;
+  padding:7px 0px 7px 0px;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-aside .row-low span{
-  padding: 0px 10px;
+aside .row-low .col:first-child{
+border-bottom: 1px solid gray;
+}
+
+aside .row-low .col a{
+  padding: 0px 4px;
 }
 
 aside .row-low .border{
@@ -136,11 +178,15 @@ aside .row-low .border{
   overflow: hidden;
 }
 
+aside .row-low .col h4{
+padding: 2px 5px;
+text-transform: capitalize;
+}
 
 .bar-fixed{
   width: calc(100vw - 230px);
   height: 90px;
-  background-color: rgba(8, 11, 18, 0.5);
+  background-color: rgba(154, 184, 255, 0.1);
   position:absolute;
   z-index: 999;
   top: 0px;
@@ -149,13 +195,16 @@ aside .row-low .border{
   align-items: center;
 }
 
-
+.bar-fixed .btm a{
+color: white;
+font-weight: 600;
+text-transform: uppercase;
+}
 
 .box-body{
-  height: calc(100% - 90px);
+  height:100%;
   overflow: auto;
-  margin-top: 90px;
-  padding: 20px 15px;
+  padding:110px 15px 20px;
 }
 
 .box-body nav{
@@ -181,7 +230,8 @@ padding: 15px 25px;
 }
 
 .wrap{
-width:100%; 
+width:100%;
+ padding:20px 0 ;
 }
 
 .wrap .cart-disc{
@@ -197,8 +247,13 @@ width:100%;
 width: 100%;
 }
 
+.wrap .image-disc.br-rd img{
+  border-radius: 50%;
+}
+
 .wrap .text-disc{
   text-align: center;
+  padding: 10px;
   color: gray;
 }
 
@@ -219,32 +274,45 @@ p{
   color: gray;
 }
 
-/* Funzioni before */
+/* pseudo-elementi */
 
 .box-body nav a::before{
   content: '';
   position: absolute;
   left: 50%;
   bottom: 0;
-  transform: translate(-50%, 0);
-  width: 50%;
-  height: 3px;
+  transform: translate(-50%, 5px);
+  width: 75%;
+  height: 1.5px;
   background-color: rgb(173, 255, 47);
   border-radius: 4px;
   scale: 0 1;
   transform-origin: center;
 }
 
-.box-body nav a:hover{
-  color: white;
-}
-
 .box-body nav a:hover::before{
   scale: 1;
 }
 
+.box-body nav a:hover{
+  color: white;
+}
 
+aside .row-high .playlist-down a:hover{
+  color: white;
+}
 
+aside .row-high .playlist-top ul li a:hover{
+  color: white;
+}
+
+aside .row-high .playlist-top ul li:hover{
+  border-left: 2px solid rgb(173, 255, 47);
+}
+
+.bar-fixed .btm:hover{
+  scale: 1.1;
+  }
 
 
 /* media query 1100 */
@@ -283,11 +351,11 @@ p{
 
     .wrap .cart-disc{
       height: 100%;
-      width: calc(100% / 5);
-      flex-direction: column;
-      align-items: center;
-      margin-right: 15px;
+      width: 46%;
+      margin: 0px;
+      padding: 5px;
     }
+
 }
 
 /* media query 600 */
@@ -304,7 +372,8 @@ p{
 
  .bar-fixed{
   width: calc(100vw - 50px);
-  height: 50px;
+  background-color: rgba(8, 11, 18, 0.2);
+
 }
 
 aside{
