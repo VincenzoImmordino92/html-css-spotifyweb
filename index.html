@@ -29,33 +29,33 @@
             </div>
           
             <nav class="playlist-top">
-           <ul>
+              <ul>
 
-            <li class="flex">
-                <div class="img-svg">
-                 <img src="./spotify/img/home.svg" alt="">
-                 
-                </div>
-                 <a href="#">home</a>
-            </li>
+                  <li class="flex">
+                    <div class="img-svg">
+                      <img src="./spotify/img/home.svg" alt="">
+                
+                    </div>
+                      <a href="#">home</a>
+                  </li>
 
-            <li class="flex">
-                <div class="img-svg">
-                 <img src="./spotify/img/search.svg" alt="">
-                 
-                </div>
-                <a href="#">cerca</a>
-            </li>
+                  <li class="flex">
+                    <div class="img-svg">
+                      <img src="./spotify/img/search.svg" alt="">
+                
+                    </div>
+                      <a href="#">cerca</a>
+                  </li>
 
-            <li class="flex">
-              <div class="img-svg flex flex-d">
-               <img src="./spotify/img/libreria.svg" alt="">
-               
-              </div>
-              <a href="#">la tua libreria</a>
-            </li>
+                  <li class="flex">
+                    <div class="img-svg flex flex-d">
+                      <img src="./spotify/img/libreria.svg" alt="">
+              
+                    </div>
+                    <a href="#">la tua libreria</a>
+                  </li>
 
-           </ul>
+              </ul>
             </nav>
 
             <div class="playlist-down">
@@ -135,6 +135,11 @@
               <div class="cart-disc flex">
                 <div class="image-disc flex">
                   <img src="./spotify/img/metal_lifting.jpg" alt="metal">
+                  <div class="image-play">
+                    <i class="fa-regular fa-circle-play"></i>
+                  </div>
+                  
+
                 </div>
 
                 <div class="text-disc">
@@ -147,6 +152,10 @@
               <div class="cart-disc flex">
                 <div class="image-disc flex">
                   <img src="./spotify/img/stranger.jpeg" alt="metal">
+                  <div class="image-play">
+                    <i class="fa-regular fa-circle-play"></i>
+                  </div>
+
                 </div>
 
                 <div class="text-disc">
@@ -159,7 +168,9 @@
               <div class="cart-disc flex">
                 <div class="image-disc flex">
                   <img src="./spotify/img/aquietplace.jpeg" alt="metal">
-                  <i class="fa-regular fa-circle-play"></i>
+                  <div class="image-play">
+                    <i class="fa-regular fa-circle-play"></i>
+                  </div>
 
                 </div>
 
@@ -173,7 +184,9 @@
               <div class="cart-disc flex">
                 <div class="image-disc flex">
                   <img src="./spotify/img/split.jpeg" alt="metal">
-                  <i class="fa-regular fa-circle-play"></i>
+                  <div class="image-play">
+                    <i class="fa-regular fa-circle-play"></i>
+                  </div>
 
                 </div>
 
@@ -187,7 +200,9 @@
               <div class="cart-disc flex">
                 <div class="image-disc flex">
                   <img src="./spotify/img/cure.jpeg" alt="metal">
-                  <i class="fa-regular fa-circle-play"></i>
+                  <div class="image-play">
+                    <i class="fa-regular fa-circle-play"></i>
+                  </div>
 
                 </div>
 
@@ -201,7 +216,9 @@
               <div class="cart-disc flex">
                 <div class="image-disc flex">
                   <img src="./spotify/img/sinister.jpeg" alt="metal">
-                  <i class="fa-regular fa-circle-play"></i>
+                  <div class="image-play">
+                    <i class="fa-regular fa-circle-play"></i>
+                  </div>
 
                 </div>
 
@@ -221,7 +238,9 @@
                 <div class="image-disc flex">
 
                   <img src="./spotify/img/radar.jpeg" alt="metal">
-                  <i class="fa-regular fa-circle-play"></i>
+                  <div class="image-play">
+                    <i class="fa-regular fa-circle-play"></i>
+                  </div>
 
                 </div>
 
@@ -238,7 +257,9 @@
                 <div class="image-disc flex">
 
                   <img src="./spotify/img/mixdaily.jpeg" alt="metal">
-                  <i class="fa-regular fa-circle-play"></i>
+                  <div class="image-play">
+                    <i class="fa-regular fa-circle-play"></i>
+                  </div>
 
                 </div>
 
@@ -260,7 +281,9 @@
                 <div class="image-disc br-rd flex">
 
                   <img src="./spotify/img/youg.jpeg" alt="metal">
-                  <i class="fa-regular fa-circle-play"></i>
+                  <div class="image-play">
+                    <i class="fa-regular fa-circle-play"></i>
+                  </div>
 
                 </div>
 
@@ -277,7 +300,9 @@
                 <div class="image-disc br-rd flex">
 
                   <img src="./spotify/img/einaudi.jpeg" alt="metal">
-                  <i class="fa-regular fa-circle-play"></i>
+                  <div class="image-play">
+                    <i class="fa-regular fa-circle-play"></i>
+                  </div>
 
                 </div>
 
@@ -299,9 +324,6 @@
 
         </main>
 
-     
-
-
       <footer class="player bug">
 
         <div class="row-player flex ">
@@ -322,10 +344,28 @@
           <div><i class="fa-regular fa-heart"></i></div>
           <div><i class="fa-regular fa-folder"></i></div>
         </div>
-       </div>
+        </div>
 
 
-       <div class="row-box center bug2"></div>
+      <div class="row-box center">
+        <div class="row-top flex">
+          <i class="fa-solid fa-shuffle"></i>
+          <i class="fa-solid fa-backward-step"></i>
+          <i class="fa-regular fa-circle-play"></i>
+          <i class="fa-solid fa-forward-step"></i>
+          <i class="fa-solid fa-arrow-rotate-right"></i>
+        </div>
+        <div class="row-bottom flex">
+          <span>0:25</span>
+          <div class="bar-playback-time">
+            <div class="bar-playback-white">
+              <div class="bar-playback-circle"></div>
+            </div>
+          </div>
+          <span>4:35</span>
+        </div>
+
+      </div>
 
 
         <div class="row-box last flex ">
